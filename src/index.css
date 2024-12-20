@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .form-control {
+    @apply w-full p-2 outline-none border rounded;
+  }
+  .btn {
+    @apply outline-none rounded border py-2 px-4 transition-opacity hover:opacity-95 duration-200 delay-75;
+  }
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  color: #0b1215;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Playfair Display Variable', serif;
+}
+
+/* ::-webkit-scrollbar {
+  @apply bg-gray-100 w-4;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-800 rounded-b-sm;
+} */
+@use postcss-nested;
+@use postcss-preset-env;
