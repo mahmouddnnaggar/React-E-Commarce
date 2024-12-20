@@ -88,8 +88,6 @@ export default function Login() {
       <div className="absolute z-10 w-full h-8 shadow bg-primary-700 top-[200px] left-[400px]"></div>
       <div className="absolute z-10 w-full h-8 shadow bg-primary-600 bottom-[200px] right-[400px]"></div>
       <div className="absolute z-10 w-full h-8 shadow bg-primary-700 bottom-[270px] right-[400px]"></div>
-      <div className="absolute z-10 w-full h-8 shadow bg-primary-600 bottom-[20px] right-0 left-0"></div>
-      <div className="absolute z-10 w-full h-8 shadow bg-primary-700 top-[10px] right-0 left-0"></div>
       <div className="container flex items-center h-[calc(100vh-100px)] relative z-20">
         <form
           className="p-6 rounded bg-white shadow-lg w-[68%] mx-auto -mt-[20px]"

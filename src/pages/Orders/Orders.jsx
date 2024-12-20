@@ -6,7 +6,10 @@ import Loading from '../../components/Loading/Loading';
 
 export default function Orders() {
   const { token } = useContext(UserContext);
-  let { id } = jwtDecode(token);
+  let id = null;
+  if (token) {
+    id = jwtDecode(token).id;
+  }
   const [orders, setOrders] = useState(null);
 
   async function getUserOrders() {

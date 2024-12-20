@@ -42,87 +42,89 @@ export default function Navbar() {
             FreshCart
           </span>
         </Link>
-        <ul
-          style={
-            token
-              ? { marginInlineStart: '230px' }
-              : { marginInlineStart: '200px' }
-          }
-          className={`pages-links capitalize flex items-center gap-10`}
-        >
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                `text-xl font-medium transition-colors hover:text-white duration-150 delay-75  ${
-                  isActive && 'text-white font-black tracking-wider text-2xl'
-                }`
-              }
-              to={'/home'}
-            >
-              home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                `text-xl font-medium transition-colors hover:text-white duration-150 delay-75  ${
-                  isActive && 'text-white font-black tracking-wider text-2xl'
-                }`
-              }
-              to={'/cart'}
-            >
-              cart
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                `text-xl font-medium transition-colors hover:text-white duration-150 delay-75  ${
-                  isActive && 'text-white font-black tracking-wider text-2xl'
-                }`
-              }
-              to={'/allorders'}
-            >
-              Orders
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                `text-xl font-medium transition-colors hover:text-white duration-150 delay-75  ${
-                  isActive && 'text-white font-black tracking-wider text-2xl'
-                }`
-              }
-              to={'/products'}
-            >
-              products
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                `text-xl font-medium transition-colors hover:text-white duration-150 delay-75  ${
-                  isActive && 'text-white font-black tracking-wider text-2xl'
-                }`
-              }
-              to={'/categories'}
-            >
-              categories
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                `text-xl font-medium transition-colors hover:text-white duration-150 delay-75  ${
-                  isActive && 'text-white font-black tracking-wider text-2xl'
-                }`
-              }
-              to={'/brands'}
-            >
-              brands
-            </NavLink>
-          </li>
-        </ul>
+        {token && (
+          <ul
+            style={
+              token
+                ? { marginInlineStart: '230px' }
+                : { marginInlineStart: '200px' }
+            }
+            className={`pages-links capitalize flex items-center gap-10`}
+          >
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  `text-xl font-medium transition-colors hover:text-white duration-150 delay-75  ${
+                    isActive && 'text-white font-black tracking-wider text-2xl'
+                  }`
+                }
+                to={'/home'}
+              >
+                home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  `text-xl font-medium transition-colors hover:text-white duration-150 delay-75  ${
+                    isActive && 'text-white font-black tracking-wider text-2xl'
+                  }`
+                }
+                to={'/cart'}
+              >
+                cart
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  `text-xl font-medium transition-colors hover:text-white duration-150 delay-75  ${
+                    isActive && 'text-white font-black tracking-wider text-2xl'
+                  }`
+                }
+                to={'/allorders'}
+              >
+                Orders
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  `text-xl font-medium transition-colors hover:text-white duration-150 delay-75  ${
+                    isActive && 'text-white font-black tracking-wider text-2xl'
+                  }`
+                }
+                to={'/products'}
+              >
+                products
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  `text-xl font-medium transition-colors hover:text-white duration-150 delay-75  ${
+                    isActive && 'text-white font-black tracking-wider text-2xl'
+                  }`
+                }
+                to={'/categories'}
+              >
+                categories
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  `text-xl font-medium transition-colors hover:text-white duration-150 delay-75  ${
+                    isActive && 'text-white font-black tracking-wider text-2xl'
+                  }`
+                }
+                to={'/brands'}
+              >
+                brands
+              </NavLink>
+            </li>
+          </ul>
+        )}
         {!token && (
           <ul className="sign-and-log-in capitalize flex items-center gap-10 ms-auto me-10 ">
             <li>

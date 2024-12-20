@@ -5,8 +5,9 @@ export const UserContext = createContext(null);
 
 export default function UserProvider({ children }) {
   const [token, setToken] = useState(localStorage.getItem('token'));
-  const { name } = jwtDecode(token);
-
+  if (token) {
+    const { name } = jwtDecode(token);
+  }
   return (
     <UserContext.Provider value={{ token, setToken, name }}>
       {children}
