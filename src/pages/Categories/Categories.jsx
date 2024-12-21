@@ -38,8 +38,8 @@ export default function Categories() {
           {categories.map(category => {
             return (
               <div
-                key={category.id}
-                className="category-card p-4 shadow bg-white rounded"
+                key={category._id}
+                className="category-card p-4 shadow bg-white rounded cursor-pointer"
               >
                 <img
                   src={category.image}

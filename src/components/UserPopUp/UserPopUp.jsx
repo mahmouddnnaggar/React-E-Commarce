@@ -92,6 +92,18 @@ export default function UserPopUp() {
                     className="space-x-2"
                     onClick={() => {
                       setIsPopUpOpen(!isPopUpOpen);
+                    }}
+                    to={'/wishlist'}
+                  >
+                    <span>Go To My Wishlist</span>
+                    <i className="fa-solid fa-cart-shopping text-primary-800"></i>
+                  </Link>
+                </li>
+                <li className="transition-[padding] hover:ps-4 duration-200 delay-75 border-b-[1px] border-primary-400 pb-2">
+                  <Link
+                    className="space-x-2"
+                    onClick={() => {
+                      setIsPopUpOpen(!isPopUpOpen);
                       logOut();
                     }}
                   >

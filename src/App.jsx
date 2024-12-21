@@ -24,6 +24,7 @@ import Wishlist from './pages/Wishlist/Wishlist.jsx';
 import ForgetPassword from './pages/ForgetPassword/ForgetPassword.jsx';
 import ResetCode from './pages/ResetCode/ResetCode.jsx';
 import ResetPassword from './pages/ResetPassword/ResetPassword.jsx';
+import NotFound from './pages/NotFound/NotFound.jsx';
 
 export default function App() {
   const router = createBrowserRouter([
@@ -46,7 +47,7 @@ export default function App() {
         { path: 'checkout', element: <Checkout /> },
         { path: 'allorders', element: <Orders /> },
         // TODO Create the not found page
-        { path: '*', element: <h2>Not Found!</h2> },
+        { path: '*', element: <NotFound /> },
       ],
     },
     {

@@ -101,6 +101,13 @@ export default function Orders() {
             </div>
           );
         })}
+        {orders.length === 0 && (
+          <div className="flex items-center justify-center h-[50vh]">
+            <p className="text-2xl text-gray-500 font-semibold">
+              You Don&#39;t Have Any Orders Yet
+            </p>
+          </div>
+        )}
       </div>
     </>
   );

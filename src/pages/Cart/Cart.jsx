@@ -22,9 +22,18 @@ export default function Cart() {
             Your Shopping Cart
           </p>
         </header>
-        <div className="py-8 px-4 rounded shadow mt-6 mb-8 bg-white">
-          {cartInfo.data.products && cartInfo.data.products.length > 0 && (
-            <>
+        <div className="empty">
+          {cartInfo.data.products && cartInfo.data.products.length === 0 && (
+            <div className="flex items-center justify-center h-[50vh]">
+              <p className="text-2xl text-gray-500 font-semibold">
+                Your Cart is Empty
+              </p>
+            </div>
+          )}
+        </div>
+        {cartInfo.data.products && cartInfo.data.products.length > 0 && (
+          <>
+            <div className="py-8 px-4 rounded shadow mt-6 mb-8 bg-white">
               <div className="space-y-5 mb-8">
                 {cartInfo.data.products.map(product => {
                   return <CartItem key={product._id} productInfo={product} />;
@@ -47,15 +56,24 @@ export default function Cart() {
                   Clear Cart
                 </button>
               </div>
-            </>
-          )}
-        </div>
-        <Link
-          to={'/checkout'}
-          className="btn bg-primary-700 text-white text-2xl mb-8 w-full py-3 block text-center"
-        >
-          Go To Payment
-        </Link>
+            </div>
+          </>
+        )}
+        {cartInfo.data.products && cartInfo.data.products.length > 0 ? (
+          <Link
+            to={'/checkout'}
+            className="btn bg-primary-700 text-white text-2xl mb-8 w-full py-3 block text-center"
+          >
+            Go To Payment
+          </Link>
+        ) : (
+          <Link
+            to={'/home'}
+            className="btn bg-primary-700 text-white text-2xl mb-8 w-full py-3 block text-center"
+          >
+            Go To Home Page
+          </Link>
+        )}
       </div>
     </section>
   );

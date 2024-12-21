@@ -10,8 +10,7 @@ export default function SignUp() {
   const [accountExistErrorMessage, setAccountExistErrorMessage] =
     useState(null);
 
-  const passwordRegex =
-    /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/;
+  const passwordRegex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$/;
 
   const phoneRegex = /^(02)?01[0125][0-9]{8}$/;
 
